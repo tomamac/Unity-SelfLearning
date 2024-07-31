@@ -266,6 +266,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1752778558609055600, guid: 98970cc34bffa1c4a92f6547a0d27f39, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: bfa32c1a69e36674cbedd558cd6ac8f5, type: 2}
+    - target: {fileID: 3088967878658083849, guid: 98970cc34bffa1c4a92f6547a0d27f39, type: 3}
+      propertyPath: playerSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3173098358520341094, guid: 98970cc34bffa1c4a92f6547a0d27f39, type: 3}
       propertyPath: m_Name
       value: Player
@@ -316,7 +324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7684270025631791899, guid: 98970cc34bffa1c4a92f6547a0d27f39, type: 3}
       propertyPath: m_CollisionDetection
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -860,6 +868,10 @@ PrefabInstance:
     - target: {fileID: 2522095260005258864, guid: a6b735f2c617bdf4fb3dc88e251392a5, type: 3}
       propertyPath: m_Name
       value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2696071228628892707, guid: a6b735f2c617bdf4fb3dc88e251392a5, type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6782141083696968000, guid: a6b735f2c617bdf4fb3dc88e251392a5, type: 3}
       propertyPath: m_LocalScale.x
@@ -2488,6 +2500,10 @@ PrefabInstance:
     - target: {fileID: 2522095260005258864, guid: a6b735f2c617bdf4fb3dc88e251392a5, type: 3}
       propertyPath: m_Name
       value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2696071228628892707, guid: a6b735f2c617bdf4fb3dc88e251392a5, type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6782141083696968000, guid: a6b735f2c617bdf4fb3dc88e251392a5, type: 3}
       propertyPath: m_LocalScale.x
