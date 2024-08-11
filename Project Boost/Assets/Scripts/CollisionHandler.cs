@@ -1,5 +1,3 @@
-using System;
-using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,8 +9,11 @@ public class CollisionHandler : MonoBehaviour
 
     [SerializeField] AudioClip Crash;
     [SerializeField] AudioClip Finish;
-    [SerializeField] float delayTime = 1f;
 
+    [SerializeField] ParticleSystem SuccessParticles;
+    [SerializeField] ParticleSystem CrashParticles;
+
+    [SerializeField] float delayTime = 1f;
 
     void Awake()
     {
@@ -21,7 +22,7 @@ public class CollisionHandler : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (isTransitioning) { return; }
+        if (isTransitioning || GetComponent<CheatMode>().CheatEnabled) { return; }
         switch (other.gameObject.tag)
         {
             case "Friendly":
@@ -43,14 +44,17 @@ public class CollisionHandler : MonoBehaviour
         {
             case "NextLevel":
                 audioSrc.PlayOneShot(Finish);
+                SuccessParticles.Play();
                 break;
             case "ReloadLevel":
                 audioSrc.PlayOneShot(Crash);
+                CrashParticles.Play();
                 break;
         }
         GetComponent<Movement>().enabled = false;
         Invoke(function, delayTime);
     }
+
     void NextLevel()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
