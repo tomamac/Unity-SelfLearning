@@ -6,3 +6,4 @@ This is my first project learning the basics of unity on Zenva platform, their G
 This project is about making a player dodge obstacles and move through the course without getting hit. Looking into Cinemachine camera and some 3D physic basics in Unity.
 ## Project Boost
 This project is about a rocket making it way to the finish and dodging obstacles along the way. I learned about physics based movement, audio, scenemanager, state and particles here.
+//TODO: Try using GameManager script in project boost and future projects to manage scenes, variables, etc.
