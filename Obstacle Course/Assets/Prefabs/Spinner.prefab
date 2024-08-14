@@ -132,5 +132,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xVal: 0
-  yVal: 0
+  yVal: 1
   zVal: 0

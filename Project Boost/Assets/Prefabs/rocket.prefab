@@ -1134,7 +1134,6 @@ GameObject:
   - component: {fileID: 3965573376838132705}
   - component: {fileID: 1630496303929933831}
   - component: {fileID: 403394995372618553}
-  - component: {fileID: 3383205249592373492}
   m_Layer: 0
   m_Name: rocket
   m_TagString: Untagged
@@ -1347,19 +1346,6 @@ MonoBehaviour:
   SuccessParticles: {fileID: 7508595924883503044}
   CrashParticles: {fileID: 2405817266992385076}
   delayTime: 1
---- !u!114 &3383205249592373492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7214068686337756357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b282214c72317f41b5dcc75412f5de5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CheatEnabled: 0
 --- !u!1 &7278145705539916444
 GameObject:
   m_ObjectHideFlags: 0

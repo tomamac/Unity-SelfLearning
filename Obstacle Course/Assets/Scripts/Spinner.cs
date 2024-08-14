@@ -10,6 +10,6 @@ public class Spinner : MonoBehaviour
     [SerializeField] float zVal = 0f;
     void Update()
     {
-        transform.Rotate(xVal, yVal, zVal);
+        transform.Rotate(xVal * Time.deltaTime * 100, yVal * Time.deltaTime * 100, zVal * Time.deltaTime * 100);
     }
 }

@@ -5,8 +5,6 @@ public class Movement : MonoBehaviour
     Rigidbody rb;
     AudioSource audioSrc;
 
-    bool isAlive;
-
     [SerializeField] AudioClip Thrust;
     [SerializeField] ParticleSystem MainBooster;
     [SerializeField] ParticleSystem LeftBooster;
@@ -23,8 +21,11 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        ProcessThrust();
-        ProcessRotation();
+        if (GameManager.Instance.State == GameManager.GameState.Playing)
+        {
+            ProcessThrust();
+            ProcessRotation();
+        }
     }
 
     private void ProcessRotation()

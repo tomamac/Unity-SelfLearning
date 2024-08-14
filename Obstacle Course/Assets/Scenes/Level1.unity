@@ -266,14 +266,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1752778558609055600, guid: 98970cc34bffa1c4a92f6547a0d27f39, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: bfa32c1a69e36674cbedd558cd6ac8f5, type: 2}
-    - target: {fileID: 3088967878658083849, guid: 98970cc34bffa1c4a92f6547a0d27f39, type: 3}
-      propertyPath: playerSpeed
-      value: 500
-      objectReference: {fileID: 0}
     - target: {fileID: 3173098358520341094, guid: 98970cc34bffa1c4a92f6547a0d27f39, type: 3}
       propertyPath: m_Name
       value: Player
@@ -316,14 +308,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5190031721888899379, guid: 98970cc34bffa1c4a92f6547a0d27f39, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7684270025631791899, guid: 98970cc34bffa1c4a92f6547a0d27f39, type: 3}
-      propertyPath: m_ImplicitCom
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7684270025631791899, guid: 98970cc34bffa1c4a92f6547a0d27f39, type: 3}
-      propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1304,14 +1288,6 @@ PrefabInstance:
     - target: {fileID: 336633286028154271, guid: 01ba0ab4450113e4a92c9353f1425e51, type: 3}
       propertyPath: m_Name
       value: Plane
-      objectReference: {fileID: 0}
-    - target: {fileID: 4894639856392571456, guid: 01ba0ab4450113e4a92c9353f1425e51, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4894639856392571456, guid: 01ba0ab4450113e4a92c9353f1425e51, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4894639856392571456, guid: 01ba0ab4450113e4a92c9353f1425e51, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2980,10 +2956,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2047181148547297199, guid: 2916e35a4864cd045b05dbe5985f9f0d, type: 3}
-      propertyPath: yVal
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7358073130026355866, guid: 2916e35a4864cd045b05dbe5985f9f0d, type: 3}
       propertyPath: m_Name
       value: Spinner
@@ -3274,7 +3246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2047181148547297199, guid: 2916e35a4864cd045b05dbe5985f9f0d, type: 3}
       propertyPath: yVal
-      value: 2.2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7358073130026355866, guid: 2916e35a4864cd045b05dbe5985f9f0d, type: 3}
       propertyPath: m_Name

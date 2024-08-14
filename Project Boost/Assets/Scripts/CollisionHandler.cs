@@ -5,8 +5,6 @@ public class CollisionHandler : MonoBehaviour
 {
     AudioSource audioSrc;
 
-    bool isTransitioning = false;
-
     [SerializeField] AudioClip Crash;
     [SerializeField] AudioClip Finish;
 
@@ -22,7 +20,7 @@ public class CollisionHandler : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (isTransitioning || GetComponent<CheatMode>().CheatEnabled) { return; }
+        if (GameManager.Instance.State == GameManager.GameState.Transition || GameManager.Instance.CheatEnabled) { return; }
         switch (other.gameObject.tag)
         {
             case "Friendly":
@@ -38,7 +36,7 @@ public class CollisionHandler : MonoBehaviour
 
     void StartLevelSequence(string function)
     {
-        isTransitioning = true;
+        GameManager.Instance.SetGameState(GameManager.GameState.Transition);
         audioSrc.Stop();
         switch (function)
         {
@@ -51,26 +49,16 @@ public class CollisionHandler : MonoBehaviour
                 CrashParticles.Play();
                 break;
         }
-        GetComponent<Movement>().enabled = false;
         Invoke(function, delayTime);
     }
 
     void NextLevel()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        int nextSceneIndex = currentSceneIndex + 1;
-        int lastSceneIndex = SceneManager.sceneCountInBuildSettings - 1;
-
-        if (currentSceneIndex == lastSceneIndex)
-        {
-            nextSceneIndex = 0;
-        }
-        SceneManager.LoadScene(nextSceneIndex);
+        GameManager.Instance.LoadNextScene();
     }
 
     void ReloadLevel()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex);
+        GameManager.Instance.ReloadScene();
     }
 }
